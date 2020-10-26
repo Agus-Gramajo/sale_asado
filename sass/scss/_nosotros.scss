@@ -1,0 +1,173 @@
+/*Quienes somos*/
+#about-us {
+    p {
+        text-align: justify;
+    }
+}
+/*Equipo*/
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+#team {
+    background: #e6d7a786 !important;
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: $color-grey;
+        border-color: $color-grey;
+        box-shadow: none;
+        outline: none;
+    }
+    .btn-primary {
+        color: #fff;
+        background-color: $color-grey;
+        border-color: $color-grey;
+    }
+    .card-team {
+        border: none;
+        background: #ffffff;
+        height: 380px;
+        p {
+            height: 110px;
+        }
+    }
+    .image-flip:hover .backside,
+    .image-flip.hover .backside {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        border-radius: .25rem;
+    }
+    .image-flip:hover .frontside,
+    .image-flip.hover .frontside {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+    .mainflip {
+        transform: perspective(1000px);
+        -webkit-transition: 1s;
+        -webkit-transform-style: preserve-3d;
+        -ms-transition: 1s;
+        -moz-transition: 1s;
+        -moz-transform: perspective(1000px);
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transition: 1s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+    .frontside {
+        position: relative;
+        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        z-index: 2;
+        margin-bottom: 30px;
+    }
+    .backside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-bottom: 30px;
+        background: white;
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+        -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+        -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+        box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    }
+    .frontside, .backside {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: 1s;
+        -webkit-transform-style: preserve-3d;
+        -moz-transition: 1s;
+        -moz-transform-style: preserve-3d;
+        -o-transition: 1s;
+        -o-transform-style: preserve-3d;
+        -ms-transition: 1s;
+        -ms-transform-style: preserve-3d;
+        transition: 1s;
+        transform-style: preserve-3d;
+    }
+    .frontside .card-team, .backside .card {
+        min-height: 312px;
+    }
+    .backside .card-team a {
+        font-size: 18px;
+        color: $color-grey !important;
+    }
+    .frontside .card-team .card-title, .backside .card .card-title {
+        color: $color-grey !important;
+    }
+    .frontside .card-team .card-body img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+}
+/*Nuestros Clientes*/
+#clientes {
+    .gallery-block {
+        padding-bottom: 60px;
+        padding-top: 60px;
+        .heading{
+            margin-bottom: 50px;
+            text-align: center;
+            h2 {
+                font-weight: bold;
+                font-size: 1.4rem;
+                text-transform: uppercase;
+            }
+        }
+        &.compact-gallery .item {
+            overflow: hidden;
+            margin-bottom: 0;
+            opacity: 1;
+            .image {
+                transition: 0.8s ease;
+                width: 400px;
+                height: 280px;
+                }
+            .info {
+                position: relative;
+                display: inline-block;
+                }
+            .description{
+                display: grid;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                color: #fff;
+                padding: 10px;
+                font-size: 17px;
+                line-height: 18px;
+                width: 100%;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                opacity: 1;
+                color: #fff;
+                transition: 0.8s ease;
+                text-align: center;
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+                background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1));
+                .description-heading{
+                    font-size: 1em;
+                    font-weight: bold;
+                    }
+                .description-body{
+                    font-size: 0.8em;
+                    margin-top: 10px;
+                    font-weight: 300;
+                    padding: 4%;
+                    }
+                    }
+            }
+    }
+} 

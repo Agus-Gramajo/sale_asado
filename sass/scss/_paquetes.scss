@@ -1,0 +1,127 @@
+/*Paquetes*/
+.card {
+    background:#fff; 
+    padding:120px 0  80px; 
+    position: relative; 
+    border: none;
+    .card-section {
+        background:#fff; 
+        margin-bottom:20px; 
+        box-shadow:0px 0px 81px 0 rgba(47,47,47,0.1); transition:all .3s ease-in-out;
+        .card-desc {
+            padding:30px;
+            .title h3 {
+                font-size:24px;
+                a {
+                    color:#333; 
+                    text-decoration:0;
+                }
+              }
+              .card-info {
+                display:flex; 
+                justify-content:space-between; 
+                align-items:center;
+                padding:10px 0;
+                .list-unstyle {
+                    list-style:none; 
+                    padding-left:0;
+                  }
+                ul {
+                margin-bottom:6px;
+                li {
+                    color:$color-grey; 
+                    font-size:16px; 
+                    margin-bottom:6px;
+                  }
+                }
+
+              }
+          }
+      }
+      .card-section-image {
+        overflow: hidden;
+        position: relative; 
+        img {
+            width:100%; 
+            height:32vh; 
+            transition:all .3s ease-in-out;
+            transform: scale(1.06) rotate(0deg);
+        } 
+        .card-purchase {
+            position:absolute;
+            text-align:right;
+            right:0;
+            bottom:0;
+            width:100%;
+            span {
+                background:green; 
+                color:#fff; 
+                font-size:14px; 
+                text-decoration:none;
+                padding:5px 25px; 
+                display: inline-block;
+          }
+          }
+      }
+      .card-section:hover .card-section-image img {
+        transform:scale(1.2);
+    }
+}
+.cart_btn {
+    background: $color-grey;
+    font-weight: 500;
+    border-radius: 0;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 20px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+.portfolio-menu{
+    text-align:center;
+    ul li{
+        display:inline-block;
+        margin:3px 0;
+        list-style:none;
+        padding:10px 15px;
+        cursor:pointer;
+        -webkit-transition:all 05s ease;
+        -moz-transition:all 05s ease;
+        -ms-transition:all 05s ease;
+        -o-transition:all 05s ease;
+        transition:all .5s ease;
+    }
+}
+.portfolio-item .item{
+	/*width:303px;*/
+	float:left;
+	margin-bottom:10px;
+}
+.btn-outline-dark:not(:disabled):not(.disabled).active, .btn-outline-dark:not(:disabled):not(.disabled):active, .show>.btn-outline-dark.dropdown-toggle, .btn-outline-dark:hover {
+    color: #fff;
+    background-color: $color-grey;
+    border-color: $color-grey;
+}
+.arrow-top {
+    text-align: right;
+    padding: 2%;
+    display:scroll;
+    position:fixed;
+    bottom: 40px;
+    right:0px;
+    z-index: 1500;
+    a {
+        color: black;
+    }
+    :hover {
+        transform: scale(1.3);
+    }
+}
+img.mfp-img {
+    width: 600px !important;
+}

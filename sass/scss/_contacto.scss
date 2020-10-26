@@ -1,0 +1,94 @@
+/* Contacto */
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 5%;
+}
+.label-form label {
+    display: none;
+}
+#form {
+    fieldset {
+        padding: 10px;
+    }
+    input, select {
+        font-size: $font-size-default;
+        width: 85%;
+        height: 45px;
+        border-radius: 5px;
+        border: solid $color-grey 1px;
+        margin: 3px;
+        padding-left: 8px;
+    }
+    input[type=checkbox] {
+        width: 15px;
+        height: 15px;
+        margin-right: 1px;
+        border-radius: 4px;
+    }
+    input[type=checkbox]:checked + p {
+        height: 15px;
+        margin-right: 1px;
+        color: #e8505b;
+        font-weight: 700;
+        border-radius: 4px;
+
+    }
+    input[type=radio] {
+        width: 15px;
+        height: 15px;
+        margin-right: 1px;
+        border-radius: 4px;
+    }
+    textarea {
+        font-size: 1rem;
+        font-family: inherit;
+        height: 140px;
+        border-radius: 5px;
+        border: solid $color-grey 1px;
+        margin: 3px;
+        padding-left: 8px;
+        width: 85%;
+    }
+    p {
+        display: inline;
+        margin: 0 2px;
+    }
+    button[type=submit] {
+        width: 25%;
+        margin-left: 40%;
+        border-radius: 5px;
+        border: solid 1px;
+        height: 40px;
+        margin-bottom: 10px;
+        transition: all 1s;
+    }
+    button p {
+        font-size: larger;
+        font-weight: 500;
+    }
+    button[type=submit]:hover {
+        color: #f3ecc2;
+        background-color: $color-grey;
+        width: 30%;
+        height: 50px;
+    }
+    label {
+        font-weight: 700;
+        font-size: 1.2rem;
+        padding: 5px;
+        line-height: 30px;
+    }
+    img {
+        width: inherit;
+        border-radius: 4px;
+        margin-top: 10px;
+        filter: drop-shadow(0.35rem 0.35rem 0.7rem rgba(150, 125, 125, 0.8));
+
+    }
+} 
+#cont-1 input {
+    width: 85%;
+}
