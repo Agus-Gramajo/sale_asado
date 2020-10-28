@@ -74,7 +74,7 @@ var molleja = new Producto ("Molleja", 'achuras', 400)
 var chinchu = new Producto ("Chinchulin", 'achuras', 250)
 
 //Detalle carne de vaca
-this.detalleVaca = function() {
+detalleVaca = function(Producto) {
     if (tipoCarne = 'vaca') {
         kgCarneVaca / 4
     } else {
@@ -87,19 +87,19 @@ this.detalleVaca = function() {
 
 
 //Subtotal carne Cerdo
-this.detalleCerdo = function() {
+detalleCerdo = function() {
     pedido.push(detalleCerdo)
     //aca deberia dividir ${kgCarneCerdo}/todos los productos cuto tipoCarne="cerdo" y pushearlos al array "pedido"
 }
 
 //Subtotal achuras
-this.detalleAchuras = function() {
+detalleAchuras = function() {
     pedido.push(detalleAchuras)
     //aca deberia dividir ${kgAchuras}/todos los productos cuyo tipoCarne="achuras" y pushearlos al array "pedido"
 }
 
 //Generador de lista de pedido
-this.generadorPedido = function() {
+7generadorPedido = function() {
     this.detalleVaca();
     this.detalleCerdo();
     this.detalleAchuras();
