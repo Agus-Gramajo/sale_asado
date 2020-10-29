@@ -4006,8 +4006,8 @@ input[type=button].btn-block {
   filter: drop-shadow(1px 0px 18px rgba(255, 255, 255, 0.802));
 }
 .navbar-brand img {
-  height: 50px !important;
-  width: auto;
+  height: auto;
+  width:20%;
 }
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
@@ -10111,7 +10111,7 @@ header.masthead h1 {
   display: none;
 }
 .masthead img {
-  width: 400px;
+  width: 40%;
   height: auto;
   filter: drop-shadow(1px 0px 18px rgba(255, 255, 255, 0.802));
 }
