@@ -31,11 +31,16 @@ function CalcularCarne () {
             case "poco":
                 this.coefAchura = 0.15
                 break;
-            default:
+            case "nada":
                 this.coefAchura = 0
+                break;   
+                default:
+                    alert("Por favor completá con alguna de las opciones para achuras")
+                    break;
         }
     }
     this.calculoCoefCerdo = function() { //calcula coeficiente para el calculo de kg de cerdo
+      
         switch (cantCerdo) {
             case "todo vaca":
                 this.coefCerdo = 0
@@ -43,8 +48,12 @@ function CalcularCarne () {
             case "mixto":
                 this.coefCerdo = (1 - this.coefAchura)/2
                 break;
+            case "todo cerdo":
+                this.coefCerdo =  1 - this.coefAchura
+                break;
             default:
-                this.coefCerdo = 1 - this.coefAchura
+                alert("Por favor completá con alguna de las opciones para cerdo")
+                break;
         }
     //Lista con pedido, devuelve una lista con los parametros que selecciono el usuario para calcular las cantidades
     var pedido = []
@@ -83,6 +92,15 @@ var chorizo = new Producto ("Chorizo", 'achuras', 350)
 var morcilla = new Producto ("Morcilla", 'achuras', 320)
 var molleja = new Producto ("Molleja", 'achuras', 400)
 var chinchu = new Producto ("Chinchulin", 'achuras', 250)
+
+var detallePedido = [vacio, pechito, entrana]
+function totalDelPedido(unCarrito) {
+    var total = 0
+    unCarrito.forEach(corte => {
+        total += corte.precio
+    });
+    return total
+}
 
 //Detalle carne de vaca -funcion para dividir kgCarneVaca entre los cortes que pertenezcan a esa categoria, para luego subirlos al array pedido
 //detalleVaca = function(Producto) {
@@ -123,5 +141,6 @@ calculadora.calculoCoefCerdo();
 calculadora.calculadorCantidades();
 
 
+console.log("El importe del pedido es $ " + totalDelPedido(detallePedido));
 
 

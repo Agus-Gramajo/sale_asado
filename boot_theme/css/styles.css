@@ -4004,6 +4004,10 @@ input[type=button].btn-block {
   line-height: inherit;
   white-space: nowrap;
 }
+.navbar-brand img {
+  width: 50px;
+  height: auto;
+}
 .navbar-brand:hover, .navbar-brand:focus {
   text-decoration: none;
 }
@@ -10096,14 +10100,18 @@ hr.light {
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../../assets/img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
 header.masthead h1 {
-  font-size: 2.25rem;
+  display: none;
+}
+.masthead img {
+  width: 150px;
+  height: auto;
 }
 @media (min-width: 992px) {
   header.masthead {
