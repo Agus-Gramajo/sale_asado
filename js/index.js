@@ -1,13 +1,15 @@
 //Calculadora de cantidades para hacer asado, en base a la cantidad de comensales que el usuario indique.
 //Va a calcular los porcentajes de cada producto, tieniendo en cuenta la indicacion del usuario sobre preferencias de eleccion de tipos de carne.
 //Una vez generado el total del calculo, el usuario va a poder seleccionar cuales de esos productos, finalmente, quiere agregar a un pedido, pudiendo proceder al pago.
-
+window.onload = function () {
+    RecibirDatos()
+}
 
 //Variables a definir por el usuario
 function userInput(nameInput) {
 	this.name=nameInput;
 }
-var nameInput = prompt('Nombre del Parriller@');
+var nameInput = document.getElementById("user-name").value;
 
 var user = new userInput(nameInput);
 console.log(JSON.stringify(user))
@@ -15,10 +17,24 @@ localStorage.setItem('input del usuario', JSON.stringify(user));
 var infoLocalParseado = JSON.parse(localStorage.getItem('input del usuario'));
 
 
-cantComensales = prompt("¿Cuánta gente va a comer?"); //prompt("¿Cuánta gente va a comer?")
-cantAchura = prompt('¿Comen achuras? (Mucho, poco o nada)').toLowerCase(); //prompt('¿Mucho, poco o nada?').toLowerCase();
-cantCerdo = prompt('¿Todo Vaca, Mixto o Todo Cerdo?').toLowerCase(); //prompt('¿Todo Vaca, Mixto o Todo Cerdo?').toLowerCase();
+cantComensales = document.getElementById("cantComensales").value;
+cantAchura = document.getElementById("cantAchura").value;
+cantCerdo = document.getElementById("cantCerdo").value;
 
+
+//Funcion para traer datos del html
+
+
+
+function RecibirDatos() {
+    var nameInput = document.getElementById("user-name").value;
+    
+    var cantComensales = document.getElementById("cantComensales").value;
+
+    var cantAchura = document.getElementById("cantAchura").value;
+    
+    var cantCerdo = document.getElementById("cantCerdo").value;
+}
 
 //funcion constructora del objeto "Producto"
 function Producto(IdProd, tipoCarne, precioKg) {
