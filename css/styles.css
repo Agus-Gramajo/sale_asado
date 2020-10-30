@@ -4356,6 +4356,7 @@ input[type=button].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  padding: 0;
 }
 .card > hr {
   margin-right: 0;
@@ -10118,7 +10119,7 @@ header.masthead h1 {
 .masthead .text-white-75 {
   filter: drop-shadow(1px 0px 35px black);
 }
-.masthead ..mb-5 {
+.masthead .mb-5 {
   margin-bottom: 2rem !important;
 }
 @media (min-width: 992px) {

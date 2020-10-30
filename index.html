@@ -32,7 +32,7 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Calculador</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#calculador">Calculador</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Recetas</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Productos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contacto</a></li>
@@ -51,20 +51,20 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 font-weight-light mb-5">¿Querés hacer un asado y no sabés cuanto comprar? <br>Nosotros lo calculamos por vos, y te lo llevamos a tu casa</p>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Calculá las cantidades</a>
+                        <button type="button" class=" btn btn btn-primary btn-xl js-scroll-trigger" data-toggle="modal" data-target="#modal-calculador">Calculá las cantidades</button><!--<a class="btn btn-primary btn-xl js-scroll-trigger" href="#modal-calculador"></a>-->
                     </div>
                 </div>
             </div>
         </header>
         <!-- About-->
         <section class="page-section bg-primary" id="about">
-            <div class="container">
+            <div class="container" id="calculador">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">¡No compres de más!</h2>
+                        <h2 class="text-white mt-0" >¡No compres de más!</h2>
                         <hr class="divider light my-4" />
                         <p class="text-white-50 mb-4">Con nuestra calculadora vas a poder calcular con presición cuánta carne necesitás, para los invitados que tengas, teniendo en cuenta sus preferencias</p>
-                        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">¡Empecemos!</a>
+                        <button type="button" class=" btn btn btn-light btn-xl js-scroll-trigger" data-toggle="modal" data-target="#modal-calculador">¡Empecemos!</button>
                     </div>
                 </div>
             </div>
@@ -197,10 +197,108 @@
                 </div>
             </div>
         </section>
-        <!-- Footer-->
-        <footer class="bg-light py-5">
-            <section class="copyright"><p>Designed by &copy;<a href="https://www.linkedin.com/in/agustina-gramajo-92840a5b/">Agustina Gramajo</a></p></section>
-        </footer>
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+        <section class="copyright"><p>Designed by &copy;<a href="https://www.linkedin.com/in/agustina-gramajo-92840a5b/">Agustina Gramajo</a></p></section>
+    </footer>
+
+<!--Modal Calculador-->
+<!--<div class="modal fade" id="modal-calculador" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-body">
+            <div class="close-modal d-flex justify-content-end">
+                <i class="fa fa-times" aria-hidden="true" data-dismiss="modal"></i>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12"><h3>Comencemos el calculo</h3></div>
+                    <div class="col-md-12 ml-auto"><span></span></div>
+                </div>
+
+                <hr>
+                <div class="row">
+                    <div class="d-flex flex-wrap col-md-12 ml-auto">
+                        <label for="nameInput">Nombre del Parriller@</label>
+                        <input type="text" name="name" id="user-name" placeholder="">
+                        <label for="cantComensales">¿Cuánta gente va a comer?</label>
+                        <input type="number" name="quantity" id="user-name" placeholder="Indicar la cantidad en números">
+
+                        <div class="col-md-12 align-content-center">
+                            <a href="#" class="btn btn btn-light btn-xl js-scroll-trigger">Calcular</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+<!-- Modal -->
+<div class="modal fade" id="modal-calculador" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog form-dark" role="document">
+    <!--Content-->
+    <div class="modal-content card card-image">
+      <div class=" py-5 px-5 z-depth-4">
+        <!--Header-->
+        <div class="modal-header text-center d-flex flex-wrap">
+            <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            <h3 class="modal-title col-md-12" id="myModalLabel"><strong>Comencemos el calculo</strong></h3><br>
+            <p>A un buen parrillero no le quedan sobras en la parrilla &#128521</p>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+          <!--Body-->
+          <div class="md-form mb-5">
+            <label data-error="wrong" data-success="right" for="nameInput">Nombre del Parriller@</label>
+            <input type="text" name="name" id="user-name" placeholder="" class="form-control validate white-text">
+          </div>
+          <div class="md-form pb-3">
+            <label for="cantComensales" data-error="wrong" data-success="right">¿Cuánta gente va a comer?</label>
+            <input type="number" name="quantity" id="user-name" placeholder="Indicar la cantidad en números" class="form-control validate white-text">
+          </div>
+          <div>
+            <label for="cantAchura">¿Comen achuras?</label><br>
+            <select name="achuras" id="cantAchura" class="form-control">
+                <option value="">Selecciona una opción...</option>
+                <option value="mucho">Mucho</option>
+                <option value="poco">Poco</option>
+                <option value="nada">Nada</option>
+            </select>
+          </div>
+          <div>
+            <label for="cantCerdo">¿Qué tipo de carne prefieren?</label>
+            <select name="corte" id="cantCerdo" class="form-control">
+                <option value="">Selecciona una opción...</option>
+                <option value="todo vaca">Todo vaca</option>
+                <option value="mixto">Mixto</option>
+                <option value="todo cerdo">Todo cerdo</option>
+            </select>
+          </div>
+          <!--<div class="form-group mt-4">
+            <input class="form-check-input" type="checkbox" id="checkbox624">
+            <label for="checkbox624" class="white-text form-check-label">Accept the<a href="#" class="green-text font-weight-bold">
+                Terms and Conditions</a></label>
+          </div>-->
+
+          <!--Grid row-->
+
+          <!--Grid row-->
+      </div>
+      <div class="text-center mb-3 col-md-12">
+        <button type="button" class="btn btn btn-primary btn-xl js-scroll-trigger">Calcular</button>
+      </div>  
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!-- Modal -->
+<script>
+    $('#modal-calculador').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+        })
+    </script>
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>

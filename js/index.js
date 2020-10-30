@@ -4,6 +4,17 @@
 
 
 //Variables a definir por el usuario
+function userInput(nameInput) {
+	this.name=nameInput;
+}
+var nameInput = prompt('Nombre del Parriller@');
+
+var user = new userInput(nameInput);
+console.log(JSON.stringify(user))
+localStorage.setItem('input del usuario', JSON.stringify(user));
+var infoLocalParseado = JSON.parse(localStorage.getItem('input del usuario'));
+
+
 cantComensales = prompt("¿Cuánta gente va a comer?"); //prompt("¿Cuánta gente va a comer?")
 cantAchura = prompt('¿Comen achuras? (Mucho, poco o nada)').toLowerCase(); //prompt('¿Mucho, poco o nada?').toLowerCase();
 cantCerdo = prompt('¿Todo Vaca, Mixto o Todo Cerdo?').toLowerCase(); //prompt('¿Todo Vaca, Mixto o Todo Cerdo?').toLowerCase();
@@ -65,11 +76,11 @@ function CalcularCarne () {
     console.log("-------------------------------")
     }
     this.calculadorCantidades = function() {
-        var kgTotal = Math.round((cantComensales * 0.35)*1000)/1000
+        var kgTotal = Math.round((cantComensales * 0.4)*1000)/1000
         var kgAchuras = Math.round((this.coefAchura * kgTotal)*1000)/1000
         var kgCarneCerdo = Math.round((this.coefCerdo * kgTotal)*1000)/1000
         var kgCarneVaca = Math.round((kgTotal - kgAchuras - kgCarneCerdo)*1000)/1000
-        console.log(`Para ${cantComensales} comensales la cantidad de carne es de ${kgTotal} Kg`);
+        console.log(`${infoLocalParseado.name} Para ${cantComensales} comensales la cantidad de carne es de ${kgTotal} Kg`);
         console.log(`La cantidad de achuras es de ${kgAchuras} Kg`);
         console.log(`La cantidad de carne de cerdo es de ${kgCarneCerdo} Kg`);
         console.log(`La cantidad de carne de vaca es de ${kgCarneVaca} Kg`);
