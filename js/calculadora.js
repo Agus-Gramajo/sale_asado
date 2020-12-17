@@ -37,12 +37,12 @@ function CalcularCarne () {
         }
     //Lista con pedido, devuelve una lista con los parametros que selecciono el usuario para calcular las cantidades
     var pedido = []
-    //console.log("Detalles del pedido:");
-    // pedido.push(cantComensales);
-    // pedido.push(cantAchura);
-    // pedido.push(cantCerdo);
-    // console.log(pedido)
-    // console.log("-------------------------------")
+    console.log("Detalles del pedido:");
+    pedido.push(cantComensales);
+    pedido.push(cantAchura);
+    pedido.push(cantCerdo);
+    console.log(pedido)
+    console.log("-------------------------------")
     }
     this.calculadorCantidades = function() {
         var kgTotal = Math.round((cantComensales * 0.4)*1000)/1000
@@ -53,9 +53,9 @@ function CalcularCarne () {
         console.log(`La cantidad de achuras es de ${kgAchuras} Kg`);
         console.log(`La cantidad de carne de cerdo es de ${kgCarneCerdo} Kg`);
         console.log(`La cantidad de carne de vaca es de ${kgCarneVaca} Kg`);
-        //alert(`Para ${cantComensales} comensales la cantidad de carne es de ${kgTotal} Kg
-        // La cantidad de achuras es de ${kgAchuras} Kg
-        // La cantidad de carne de cerdo es de ${kgCarneCerdo} Kg
-        // La cantidad de carne de vaca es de ${kgCarneVaca} Kg`);
+        console.log(`Para ${cantComensales} comensales la cantidad de carne es de ${kgTotal} Kg
+        La cantidad de achuras es de ${kgAchuras} Kg
+        La cantidad de carne de cerdo es de ${kgCarneCerdo} Kg
+        La cantidad de carne de vaca es de ${kgCarneVaca} Kg`);
     }
     }

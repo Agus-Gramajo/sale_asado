@@ -200,111 +200,130 @@
     <footer class="bg-light py-5">
         <section class="copyright"><p>Designed by &copy;<a href="https://www.linkedin.com/in/agustina-gramajo-92840a5b/">Agustina Gramajo</a></p></section>
     </footer>
-
-<!--Modal Calculador-->
-<!--<div class="modal fade" id="modal-calculador" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-body">
-            <div class="close-modal d-flex justify-content-end">
-                <i class="fa fa-times" aria-hidden="true" data-dismiss="modal"></i>
-            </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12"><h3>Comencemos el calculo</h3></div>
-                    <div class="col-md-12 ml-auto"><span></span></div>
+<!--Modal Calculadora-->
+<div class="modal fade" id="modal-calculador" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog form-dark" role="document">
+        <!--Content-->
+        <div class="modal-content card card-image">
+            <div class="z-depth-4">
+                <!--Header-->
+                <div class="modal-header text-center d-flex flex-wrap">
+                    <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3 class="modal-title col-md-12" id="myModalLabel"><strong>Comencemos el calculo</strong></h3><br>
+                    <p>A un buen parrillero no le quedan sobras en la parrilla &#128521</p>
                 </div>
-
-                <hr>
-                <div class="row">
-                    <div class="d-flex flex-wrap col-md-12 ml-auto">
-                        <label for="nameInput">Nombre del Parriller@</label>
-                        <input type="text" name="name" id="user-name" placeholder="">
-                        <label for="cantComensales">¿Cuánta gente va a comer?</label>
-                        <input type="number" name="quantity" id="user-name" placeholder="Indicar la cantidad en números">
-
-                        <div class="col-md-12 align-content-center">
-                            <a href="#" class="btn btn btn-light btn-xl js-scroll-trigger">Calcular</a>
-                        </div>
-                    </div>
+                <!--Body-->
+                <div class="modal-body">
+                <!--Body-->
+                <div class="md-form mb-5">
+                    <label data-error="wrong" data-success="right" for="nameInput">Nombre del Parriller@</label>
+                    <input type="text" name="name" id="user-name" placeholder="" class="form-control validate white-text">
                 </div>
+                <div class="md-form pb-3">
+                    <label for="cantComensales" data-error="wrong" data-success="right">¿Cuánta gente va a comer?</label>
+                    <input type="number" name="quantity" id="cantComensales" placeholder="Indicar la cantidad en números" class="form-control validate white-text">
+                </div>
+                <div>
+                    <label for="cantAchura">¿Comen achuras?</label><br>
+                    <select name="achuras" id="cantAchura" class="form-control">
+                        <option value="">Selecciona una opción...</option>
+                        <option value="mucho">Mucho</option>
+                        <option value="poco">Poco</option>
+                        <option value="nada">Nada</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cantCerdo">¿Qué tipo de carne prefieren?</label>
+                    <select name="corte" id="cantCerdo" class="form-control">
+                        <option value="">Selecciona una opción...</option>
+                        <option value="todo vaca">Todo vaca</option>
+                        <option value="mixto">Mixto</option>
+                        <option value="todo cerdo">Todo cerdo</option>
+                    </select>
+                </div>
+                <!--<div class="form-group mt-4">
+                    <input class="form-check-input" type="checkbox" id="checkbox624">
+                    <label for="checkbox624" class="white-text form-check-label">Accept the<a href="#" class="green-text font-weight-bold">
+                        Terms and Conditions</a></label>
+                </div>-->
             </div>
+            <div class="text-center mb-3 col-md-12">
+                <button type="button" id="btn-calcular" class="btn btn btn-primary btn-xl js-scroll-trigger" value="CallCalcFunction">Calcular</button>
+            </div>  
+            </div>
+        <!--/.Content-->
         </div>
     </div>
-</div>-->
-<!-- Modal -->
-<div class="modal fade" id="modal-calculador" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog form-dark" role="document">
-    <!--Content-->
-    <div class="modal-content card card-image">
-      <div class="z-depth-4">
-        <!--Header-->
-        <div class="modal-header text-center d-flex flex-wrap">
-            <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-            <h3 class="modal-title col-md-12" id="myModalLabel"><strong>Comencemos el calculo</strong></h3><br>
-            <p>A un buen parrillero no le quedan sobras en la parrilla &#128521</p>
-        </div>
-        <!--Body-->
-        <div class="modal-body">
-          <!--Body-->
-          <div class="md-form mb-5">
-            <label data-error="wrong" data-success="right" for="nameInput">Nombre del Parriller@</label>
-            <input type="text" name="name" id="user-name" placeholder="" class="form-control validate white-text">
-          </div>
-          <div class="md-form pb-3">
-            <label for="cantComensales" data-error="wrong" data-success="right">¿Cuánta gente va a comer?</label>
-            <input type="number" name="quantity" id="cantComensales" placeholder="Indicar la cantidad en números" class="form-control validate white-text">
-          </div>
-          <div>
-            <label for="cantAchura">¿Comen achuras?</label><br>
-            <select name="achuras" id="cantAchura" class="form-control">
-                <option value="">Selecciona una opción...</option>
-                <option value="mucho">Mucho</option>
-                <option value="poco">Poco</option>
-                <option value="nada">Nada</option>
-            </select>
-          </div>
-          <div>
-            <label for="cantCerdo">¿Qué tipo de carne prefieren?</label>
-            <select name="corte" id="cantCerdo" class="form-control">
-                <option value="">Selecciona una opción...</option>
-                <option value="todo vaca">Todo vaca</option>
-                <option value="mixto">Mixto</option>
-                <option value="todo cerdo">Todo cerdo</option>
-            </select>
-          </div>
-          <!--<div class="form-group mt-4">
-            <input class="form-check-input" type="checkbox" id="checkbox624">
-            <label for="checkbox624" class="white-text form-check-label">Accept the<a href="#" class="green-text font-weight-bold">
-                Terms and Conditions</a></label>
-          </div>-->
-      </div>
-      <div class="text-center mb-3 col-md-12">
-        <button type="button" id='btn-calcular' class="btn btn btn-primary btn-xl js-scroll-trigger" value="CallCalcFunction">Calcular</button>
-      </div>  
-    </div>
-    <!--/.Content-->
-  </div>
 </div>
-<!-- Modal -->
+
+<!--Modal Lista pedido-->
+<div class="modal fade" id="modal-pedido" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog form-dark" role="document">
+        <!--Content-->
+        <div class="modal-content card card-image">
+            <div class="z-depth-4">
+                <!--Header-->
+                <div class="modal-header text-center d-flex flex-wrap">
+                    <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3 class="modal-title col-md-12" id="myModalLabel"><strong>Detalle del pedido</strong></h3><br>
+                    <p>Podés modificar las cantidades acá, o simplemente enviar todo al carrito para terminar la compra &#128521</p>
+                </div>
+                <!--Body-->
+                <div class="modal-body">
+                <!--Body-->
+                <div class="md-form mb-5">
+                    <label data-error="wrong" data-success="right" for="nameInput">Nombre del Parriller@</label>
+                    <input type="text" name="name" id="user-name" placeholder="" class="form-control validate white-text">
+                </div>
+                <div class="md-form pb-3">
+                    <label for="cantComensales" data-error="wrong" data-success="right">¿Cuánta gente va a comer?</label>
+                    <input type="number" name="quantity" id="cantComensales" placeholder="Indicar la cantidad en números" class="form-control validate white-text">
+                </div>
+                <div>
+                    <label for="cantAchura">¿Comen achuras?</label><br>
+                    <select name="achuras" id="cantAchura" class="form-control">
+                        <option value="">Selecciona una opción...</option>
+                        <option value="mucho">Mucho</option>
+                        <option value="poco">Poco</option>
+                        <option value="nada">Nada</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cantCerdo">¿Qué tipo de carne prefieren?</label>
+                    <select name="corte" id="cantCerdo" class="form-control">
+                        <option value="">Selecciona una opción...</option>
+                        <option value="todo vaca">Todo vaca</option>
+                        <option value="mixto">Mixto</option>
+                        <option value="todo cerdo">Todo cerdo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="text-center mb-3 col-md-12">
+                <button type="button" id='btn-enviarCarrito' class="btn btn btn-primary btn-xl js-scroll-trigger">Enviar a carrito</button>
+            </div>  
+            </div>
+        <!--/.Content-->
+        </div>
+    </div>
+</div>
+
 <script>
     $('#modal-calculador').on('shown.bs.modal', function () {
         $('#myInput').trigger('focus')
         })
-    </script>
-    <!--JS-->
-    
-
-    <!-- Bootstrap core JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <!-- Third party plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+</script>
+<!-- Bootstrap core JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
 
 
 <!-- jQuery Bootstrap -->
@@ -313,8 +332,8 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>    
 <!-- Bootstrap -->
 <script src="js/bootstrap.min.js"></script>
-
-<script src="./js/calculadora.js"></script>
+<!--JS-->
+<!-- <script src="./js/calculadora.js"></script> -->
 <script src="./js/productos.js"></script>
 <script src="./js/index.js"></script>
 </body>
